@@ -1,27 +1,3 @@
-macro_next_monitor: macro_next_monitor{
-compatible = "zmk,behavior-macro";
-label = "macro_next_monitor";
-#binding-cells = <0>;
-bindings = <&kp LEFT_SHIFT LEFT_WIN RIGHT>;
-};
-macro_prev_monitor: macro_prev_monitor{
-compatible = "zmk,behavior-macro";
-label = "macro_prev_monitor";
-#binding-cells = <0>;
-bindings = <&kp LEFT_SHIFT LEFT_WIN LEFT>;
-};
-macro_prev_desktop: macro_prev_desktop{
-compatible = "zmk,behavior-macro";
-label = "macro_prev_desktop";
-#binding-cells = <0>;
-bindings = <&kp LEFT_CONTROL>, <&kp LEFT_WIN>, <&kp LEFT>;
-};
-macro_next_desktop: macro_next_desktop{
-compatible = "zmk,behavior-macro";
-label = "macro_next_desktop";
-#binding-cells = <0>;
-bindings = <&kp LEFT_CONTROL>, <&kp LEFT_WIN>, <&kp RIGHT>;
-};
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
