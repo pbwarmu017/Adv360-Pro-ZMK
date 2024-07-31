@@ -35,12 +35,7 @@
         F2_Sel_All: F2_Sel_All {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp F2>,
-                <&macro_press>,
-                <&kp LCTRL &kp A>,
-                <&macro_release>;
+            bindings = <&macro_tap>, <&kp F2 &kp LC(A)>;
 
             label = "F2_SEL_ALL";
         };
