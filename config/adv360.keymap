@@ -39,6 +39,69 @@
 
             label = "F2_SEL_ALL";
         };
+
+        TIA_RenameTag: TIA_RenameTag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(T))>;
+            label = "TIA_RENAMETAG";
+        };
+
+        TIA_Open_All_Networks: TIA_Open_All_Networks {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F11)>;
+            label = "TIA_OPEN_ALL_NETWORKS";
+        };
+
+        TIA_Close_All_Networks: TIA_Close_All_Networks {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F12)>;
+            label = "TIA_CLOSE_ALL_NETWORKS";
+        };
+
+        TIA_ADD_NO: TIA_ADD_NO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F9>;
+            label = "TIA_ADD_NO";
+        };
+
+        TIA_ADD_EMPTY: TIA_ADD_EMPTY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F8>;
+            label = "TIA_ADD_EMPTY";
+        };
+
+        TIA_ADD_NC: TIA_ADD_NC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F10>;
+            label = "TIA_ADD_NC";
+        };
+
+        TIA_GOTO_DEFINITION: TIA_GOTO_DEFINITION {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(D))>;
+            label = "TIA_GOTO_DEFINITION";
+        };
+
+        TIA_MODIFY_TO_1: TIA_MODIFY_TO_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F2)>;
+            label = "TIA_MODIFY_TO_1";
+        };
+
+        TIA_MODIFY_TO_0: TIA_MODIFY_TO_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F3)>;
+            label = "TIA_MODIFY_TO_0";
+        };
     };
 
     keymap {
