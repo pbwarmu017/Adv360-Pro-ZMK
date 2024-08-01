@@ -109,11 +109,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1          &kp N2          &kp N3       &kp N4            &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7             &kp N8       &kp N9           &kp N0             &kp MINUS
-&kp TAB    &kp Q           &kp W           &kp E        &kp R             &kp T   &none                                                    &none      &kp Y   &kp U              &kp I        &kp O            &kp P              &kp BSLH
-&kp ESC    &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm LEFT_WIN SEMI  &kp SQT
-&kp LSHFT  &kp Z           &kp X           &kp C        &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &kp COMMA    &kp DOT          &kp FSLH           &kp RSHFT
-&mo 2      &kp GRAVE       &kp CAPS        &kp LEFT     &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN     &kp LBKT         &kp RBKT           &mo 2
+&hm F1 EQUAL  &hm F2 NUMBER_2  &hm F3 NUMBER_2  &hm F4 NUMBER_3  &hm F5 NUMBER_4   &hm F6 N5  &none                                                  &mo 3      &hm F7 N6  &hm F8 N7          &hm F9 N8    &hm F10 N9       &hm F11 N0         &hm F12 MINUS
+&kp TAB       &kp Q            &kp W            &kp E            &kp R             &kp T      &tog 4                                                 &none      &kp Y      &kp U              &kp I        &kp O            &kp P              &kp BSLH
+&kp ESC       &hm LEFT_WIN A   &hm LEFT_ALT S   &hm LCTRL D      &hm LEFT_SHIFT F  &kp G      &none     &mo 2    &tog 1        &kp LGUI   &kp RCTRL  &none      &kp H      &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm LEFT_WIN SEMI  &kp SQT
+&kp LSHFT     &kp Z            &kp X            &kp C            &kp V             &kp B                         &kp HOME      &kp PG_UP                        &kp N      &kp M              &kp COMMA    &kp DOT          &kp FSLH           &kp RSHFT
+&mo 2         &kp GRAVE        &caps_word       &kp LEFT         &kp RIGHT                    &kp BSPC  &kp DEL  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP             &kp DOWN     &kp LBKT         &kp RBKT           &mo 2
             >;
         };
 
@@ -133,7 +133,7 @@
 &trans  &trans  &F2_Sel_All  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans       &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans       &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans       &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &kp CAPS     &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
@@ -144,6 +144,16 @@
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        TIA_Portal {
+            bindings = <
+&none  &none          &none                 &none                    &none                   &none                 &none                                           &none   &none  &none             &none             &none  &none  &none
+&none  &kp LC(LS(P))  &TIA_GOTO_DEFINITION  &kp F11                  &TIA_RenameTag          &kp LC(LS(NUMBER_2))  &trans                                          &trans  &none  &none             &none             &none  &none  &none
+&none  &kp LC(LS(I))  &TIA_ADD_EMPTY        &TIA_ADD_NO              &TIA_ADD_NC             &none                 &trans     &none       &none      &none  &none  &trans  &none  &none             &none             &none  &none  &none
+&none  &none          &none                 &none                    &kp LS(F9)              &kp LS(F8)                                   &none      &none                 &none  &none             &none             &none  &none  &none
+&none  &none          &none                 &TIA_Close_All_Networks  &TIA_Open_All_Networks                        &kp LC(Z)  &kp DELETE  &none      &none  &none  &none          &TIA_MODIFY_TO_1  &TIA_MODIFY_TO_0  &none  &none  &none
             >;
         };
     };
