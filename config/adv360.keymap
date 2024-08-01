@@ -102,6 +102,27 @@
             bindings = <&kp LC(F3)>;
             label = "TIA_MODIFY_TO_0";
         };
+
+        Next_Desktop: Next_Desktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LCTRL) &kp LG(LA(RIGHT))>;
+            label = "NEXT_DESKTOP";
+        };
+
+        Prev_Desktop: Prev_Desktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LCTRL) &kp LG(LA(LEFT))>;
+            label = "PREV_DESKTOP";
+        };
+
+        pw: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp N &kp G &kp I &kp N &kp E &kp E &kp R &kp I &kp N &kp G &kp LS(T) &kp E &kp A &kp M &kp N2 &kp N0 &kp N2>;
+            label = "PW";
+        };
     };
 
     keymap {
@@ -129,11 +150,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3       &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &F2_Sel_All  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans       &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans       &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &kp CAPS     &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3       &kp F4         &kp F5         &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &F2_Sel_All  &trans         &trans         &trans  &none                                       &none   &trans  &trans  &trans  &trans   &pw      &trans
+&trans  &trans  &trans       &trans         &trans         &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans       &trans         &trans         &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &kp CAPS     &Prev_Desktop  &Next_Desktop          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
