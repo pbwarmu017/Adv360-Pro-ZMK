@@ -124,18 +124,18 @@
             label = "PW";
         };
 
-        Prev_Monitor: Next_Monitor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LCTRL) &kp LG(LS(LEFT))>;
-            label = "NEXT_MONITOR";
-        };
-
         Next_Monitor: Next_Monitor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(LCTRL) &kp LG(LS(RIGHT))>;
             label = "NEXT_MONITOR";
+        };
+
+        Prev_Monitor: Prev_Monitor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LCTRL) &kp LG(LS(LEFT))>;
+            label = "PREV_MONITOR";
         };
     };
 
